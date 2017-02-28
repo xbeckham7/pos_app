@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>挂号</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/registration.css" rel="stylesheet">
+    
+<style>
+    .cal_ul >li >a:hover{
+        background: #ffffff;
+    }
+    .clickstyle {
+    background: #4E7CA0;
+    color: #ffffff;
+}
+
+</style>
+</head>
+
+<body>
+    <div class="login-page">
+        <div style="display:block;float:left;margin:2% 0 0 2%;width:16%">
+            <a href="registration_pro.html" style="margin:0;display:block;float:left;padding:0 30px">
+                <img style="width:45px;" src="image/back.png"/>
+            </a>
+            <a href="index.html" style="margin:0;display:block;float:left;">
+                <img style="width:45px;" src="image/index.png"/>
+            </a>
+        </div>
+        <h1>挂 号</h1>
+        <div class="form">
+            <div class="cal_div">
+                <ul class="cal_ul">
+                    <a href="registration_doctor5.html">
+                        <li>周一<p>5</p>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="active">周二<p>6</p>
+                        </li>
+                    </a>
+                    <a href="registration_doctor7.html">
+                        <li>周三<p>7</p>
+                        </li>
+                    </a>
+                    <a href="registration_doctor8.html">
+                        <li>周四<p>8</p>
+                        </li>
+                    </a>
+                    <a href="registration_doctor9.html">
+                        <li>周五<p>9</p>
+                        </li>
+                    </a>
+                    <a href="registration_doctor10.html">
+                        <li>周六<p>10</p>
+                        </li>
+                    </a>
+                    <a href="registration_doctor11.html">
+                        <li>周日<p>11</p>
+                        </li>
+                    </a>
+                    <a href="registration_doctor12.html">
+                        <li>周一<p>12</p>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div class="doctorlist">
+                <div class="doctor">
+                    <img class="photo" src="image/docphoto.png"/ >
+                    <p>
+                        <span>王磊</span><br />
+                        ● 主任医师<br /><br />
+                        <span style="font-size:22px;color:#808080">王磊，专注此领域23年，曾获得过2015年的此<br />奖项。是被誉为国内最杰出的此领域专家之一</span>
+                    </p>
+                    <h5 class="available">
+                        <a class="unavailable">已排满</a>
+                    </h5>
+                </div>
+
+                <div class="doctor">
+                    <img class="photo" src="image/docphoto.png"/ >
+                    <p>
+                        <span>姜志超</span><br />
+                        ● 主任医师<br /><br />
+                        <span style="font-size:22px;color:#808080">在此领域有着非凡的成就，获得过2016年的此，<br />国内此领域专家之一</span>
+                    </p>
+                    <h5>
+                        <a class="available" href="registration_doctor_time_jiang.html" onclick="content()">可预约</a>
+                    </h5>
+                </div>
+
+                <div class="doctor">
+                    <img class="photo" src="image/docphoto.png"/ >
+                    <p>
+                        <span>陈乔恩</span><br />
+                        ● 主任医师<br /><br />
+                        <span style="font-size:22px;color:#808080">在此领域有着非凡的成就，获得过2016年的此，<br />国内此领域专家之一</span>
+                    </p>
+                    <h5>
+                        <a class="available" href="registration_doctor_time_chen.html" onclick="content()">可预约</a>
+                    </h5>
+                </div>
+                                
+            </div>                  
+        </div>
+    </div>
+
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("li");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+    window.onload = function () {
+
+    }
+
+    function content() {
+        var date = "6";
+        localStorage.setItem("d", date);
+    }
+</script>
+
+</body>
+</html>

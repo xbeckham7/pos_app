@@ -1,0 +1,246 @@
+﻿
+.cal_div {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    height: auto;
+}
+
+.cal_ul {
+    list-style: none;
+    margin: 0 auto;
+    height: 65px;
+    padding: 0;
+}
+
+.cal_ul li {
+    float: left;
+}
+.cal_ul li p {
+    margin: 0;
+    font-size: 32px;
+}
+
+li {
+    display: block;
+    list-style-type: none;
+    width: 12.5%;
+    background: #ffffff;
+    height: 60px;
+    font-size: 15px;
+    padding-top:4px;
+}
+
+.active {
+    background: #4E7CA0;
+    color: #ffffff;
+}
+
+.doctorlist {
+    font-family: "Roboto",sans-serif;
+    outline: 1px;
+    text-align: center;
+    background: #FFF;
+    border: 1px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 1.8em;
+    padding: 3% 3%;
+}
+
+.doctor {
+    font-family: "Roboto",sans-serif;
+    border: 1px solid #ede9e9;
+    margin: 0 auto 3%;
+    overflow: hidden;
+}
+
+    .doctor p {
+        display: block;
+        float: left;
+        font-size: 16px;
+        color: #c6c0c0;
+        margin: 3% auto 0 auto;
+        line-height: 1.5;
+        text-align: left;
+    }
+
+    .doctor span {
+        font-size: 28px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .doctor h5 a{        
+        display: block;
+        float: right;
+        margin-right: 60px;
+        width: 95px;
+        height: 35px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 35px;
+        border-radius:5px;
+    }
+    .available{
+        color: #ffffff!important;
+        background: #91df1a;
+    }
+    .unavailable{
+        color: #ffffff!important;
+        background: #c6c0c0;
+    }
+
+.photo {
+    width: 10%;
+    margin: 3% 5% 5% 5%;
+    float: left;
+}
+
+table{
+    text-align:center;
+    width:100%;
+    height:100px;
+    color:#000000;
+    font-weight:bold;
+}
+td{
+    vertical-align:middle;
+    padding:0 0 0 20px;
+    margin:0;
+    text-align:left;
+
+}
+.table_a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        border-radius:5px;
+        color: #ffffff!important;
+        background: #91df1a;
+        float:left;
+        width:100px;
+        height:40px;
+        line-height:40px;
+        letter-spacing:4px;
+        font-size:21px;
+}
+.pay{
+    font-family: "Roboto",sans-serif;
+    outline: 1px;
+    text-align: center;
+    background: #FFF;
+    border: 1px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    padding: 3% 3%;
+}
+.table_pay{
+    text-align:center;
+    width:500px;
+    color:#000000;
+    font-weight:bold;
+    margin:0 auto;    
+}
+.table_pay tr td{
+    text-align:center;
+    height:60px;
+    padding:0;
+}
+.table_pay_a{
+        display: block;
+        margin:0 auto;
+        text-align: center;
+        text-decoration: none;
+        border-radius:5px;
+        color: #ffffff!important;
+        background: #91df1a;
+        width:250px;
+        height:50px;
+        line-height:50px;
+        letter-spacing:4px;
+        font-size:24px;
+}
+.pay_td{
+    text-align:center;
+    height:60px;
+    padding:0;
+    color:#ff6a00;
+    border:3px solid #ff6a00;
+    border-radius:10px;
+}
+.table_pay_card{
+    text-align:center;
+    width:850px;
+    color:#000000;
+    font-weight:bold;
+    margin-left:10%;
+    margin:0 auto;   
+    border-collapse:separate;
+    border-spacing:20px;
+}
+.paycard_td_1{
+    text-align:center;
+    height:60px;
+    padding:0;
+    color:#000000;
+    border:3px solid #c6c0c0;
+    border-radius:10px;
+}
+.paycard_td_2{
+    text-align:center;
+    height:60px;
+    padding:0;
+    color:#ff6a00;
+    border:3px solid #ff6a00;
+    border-radius:10px;
+}
+.table_paycard_a{
+        display: block;
+        margin:0 auto;
+        text-align: center;
+        text-decoration: none;
+        border-radius:5px;
+        color: #ffffff!important;
+        background: #91df1a;
+        width:200px;
+        height:40px;
+        line-height:40px;
+        letter-spacing:4px;
+        font-size:21px;
+}
+.table_payconfirm{
+    text-align:center;
+    width:540px;
+    color:#000000;
+    font-weight:bold;
+    margin:0 auto;  
+    border-collapse:separate;
+    border-spacing:20px;
+}
+
+.table_paypw_a{
+        display: block;
+        margin:0 auto;
+        text-align: center;
+        text-decoration: none;
+        border-radius:5px;
+        color: #ffffff!important;
+        background: #91df1a;
+        width:550px;
+        height:60px;
+        line-height:60px;/*文字处于中间，值等于height的值即可*/
+        letter-spacing:4px;
+        font-size:24px;
+}
+.table_detail{
+    text-align:center;
+    width:500px;
+    color:#000000;
+    font-weight:bold;
+    margin:0 auto;  
+    border-collapse:separate;
+    border-spacing:20px;
+}

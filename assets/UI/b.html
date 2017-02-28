@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+        接收到的值1：<input type="text" name="jieshouzhi1" id="jieshouzhi1" value="null" /><br />
+        接收到的值2：<input type="text" name="jieshouzhi2" id="jieshouzhi2" value="null" /><br />
+        接收到的值3：<input type="text" name="card" id="card" value="null" />
+</body>
+    <script type="text/javascript">
+
+            window.onload=function(){  
+
+                var a=localStorage.getItem("1");  
+                var b=localStorage.getItem("2");
+                var c=localStorage.getItem("cardid");
+                document.getElementById("jieshouzhi1").value=a;  
+                document.getElementById("jieshouzhi2").value=b;
+                document.getElementById("card").value=c;
+                /*$("#jieshouzhi1").val(a);  
+                $("#jieshouzhi2").val(b);*/  
+            }  
+    </script>
+</html>

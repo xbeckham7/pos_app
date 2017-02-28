@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑卡</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script type="text/javascript">
+    function javacardjss(){
+    window.location.href="card_scan_success.html";
+    }
+
+    function uncrd(){
+    jss.unacrdJs();
+    }
+    function javacardidjss(s){
+    localStorage.setItem("cardid", s);
+    }
+    </script>
+</head>
+<body>
+    <div class="login-page">
+        <div style="display:block;float:left;margin:2% 0 0 2%;width:16%">
+            <a href="card_scan.html" style="margin:0;display:block;float:left;padding:0 30px" onclick="uncrd()">
+                <img style="width:45px;" src="image/back.png"/>
+            </a>
+            <a href="index.html" style="margin:0;display:block;float:left;" onclick="uncrd()">
+                <img style="width:45px;" src="image/index.png"/>
+            </a>
+        </div>
+        <h1>绑 卡</h1>
+        <div class="form" style="background:#ffffff">
+            <form class="login-form">
+                <h2 class="scancard">请将卡放在磁卡感应区域!</h2>
+                <img style="display:block;margin:0 auto;" src="image/scancard.png"/>
+                <p class="message"><a href="card_byhand.html" onclick="unscd()">手工建档</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

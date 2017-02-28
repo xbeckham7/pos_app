@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缴费</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/registration.css" rel="stylesheet">
+    
+<style>
+    .login-page .form .pay .table_pay .pay_td >a{/*提高优先级！*/
+        color:#ff6a00;
+    }
+    .login-page .form .pay .table_pay .clickstyle >a{
+        color:#ff6a00;
+    }
+    .clickstyle {
+    text-align:center;
+    height:60px;
+    padding:0;
+    color:#ff6a00;
+    border:3px solid #ff6a00;
+    border-radius:10px;
+}
+
+</style>
+</head>
+<body>
+    <div class="login-page">
+        <div style="display:block;float:left;margin:2% 0 0 2%;width:16%">
+            <a href="index.html" style="margin:0;display:block;float:left;padding:0 30px;background:#fff;opacity:0; filter:alpha(opacity=0);">
+                <img style="width:45px;" src="image/back.png"/>
+            </a>
+            <a href="index.html" style="margin:0;display:block;float:left;">
+                <img style="width:45px;" src="image/index.png"/>
+            </a>
+        </div>
+        <h1>缴 费</h1>
+        <div class="form">
+            <div class="pay">
+                <table class="table_pay">
+                    <tr><td><a href="#">挂号费：16.00</a></td></tr>
+<!--                    <tr><td><a href="#">诊疗费：0.00</a></td></tr>
+                    <tr><td><a href="#">医药费：0.00</a></td></tr>-->
+                    <tr><td><a href="#">社保抵扣：10.00</a></td></tr>
+                    <tr><td class="pay_td"><a href="#">自 费：6.00</a></td></tr>                               
+                </table>
+                <br />
+                <a class="table_pay_a" href="pay_card.html" id="payhref">缴费</a>    
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    var oLis=document.getElementsByTagName("td");
+    var i,j;
+    var length=oLis.length;
+    for(i=0;i<length;i++){
+        oLis[i].onclick=function(){
+            for(j=0;j<length;j++){
+                oLis[j].className="";
+            }
+            this.className+="clickstyle";
+        }
+    }
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+    <!--调用键盘-->
+    function rec(){
+    js.acllJs();
+    }
+    <!--调用插卡-->
+    function crd(){
+    jss.acrdJs();
+    }
+    <!--关闭插卡-->
+    function uncrd(){
+    jss.unacrdJs();
+    }
+    <!--调用刷卡-->
+    function scd(){
+    jsss.scrdJs();
+    }
+    <!--关闭刷卡-->
+    function unscd(){
+    jsss.unscrdJs();
+    }
+
+    <!--键盘确定后跳转-->
+    function javacalljs(){
+    window.location.href="b.html";
+    }
+    <!--插卡成功后跳转-->
+    function javacardjss(){
+    window.location.href="b.html";
+    }
+    <!--关闭插卡后跳转-->
+    function javauncardjss(){
+    window.location.href="b.html";
+    }
+    <!--刷卡成功后跳转-->
+    function javascardjsss(){
+    window.location.href="b.html";
+    }
+    <!--关闭刷卡后跳转-->
+    function javaunscardjsss(){
+    window.location.href="b.html";
+    }
+    <!--储存卡号-->
+    function javacardidjss(s){
+    localStorage.setItem("cardid", s);
+    }
+    </script>
+</head>
+<body>
+        <!--传输数据1：
+        <input type="text" name="zhi1" id="zhi1" value="123" />  
+        <br />传输数据2：  
+        <input type="text" name="zhi2" id="zhi2" value="234" />   
+        <a href="b.html" onclick="content()">提交跳转传值</a>-->
+        <input name="button" type="button" onclick="rec()" value="点击1" />
+        <input name="button" type="button" onclick="crd()" value="点击2" />
+        <input name="button" type="button" onclick="uncrd()" value="点击3" />
+        <input name="button" type="button" onclick="scd()" value="点击4" />
+        <input name="button" type="button" onclick="unscd()" value="点击5" />
+        <input type="button" id="btn" value="免费获取验证码" onclick="settime(this)" /> 
+</body>
+    <script type="text/javascript"> 
+        var countdown=60; 
+        function settime(val) { 
+            if (countdown == 0) { 
+                val.removeAttribute("disabled");    
+                val.value="免费获取验证码"; 
+                countdown = 60; 
+            } else { 
+                val.setAttribute("disabled", true); 
+                val.value="重新发送(" + countdown + ")"; 
+                countdown--; 
+            } 
+            setTimeout(function() { 
+                settime(val) 
+            },1000) 
+        } 
+</script> 
+
+</html>

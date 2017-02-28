@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>挂号</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/registration.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="login-page">
+        <div style="display:block;float:left;margin:2% 0 0 2%;width:16%">
+            <a href="registration_doctor5.html" style="margin:0;display:block;float:left;padding:0 30px">
+                <img style="width:45px;" src="image/back.png"/>
+            </a>
+            <a href="index.html" style="margin:0;display:block;float:left;">
+                <img style="width:45px;" src="image/index.png"/>
+            </a>
+        </div>
+        <h1>挂 号</h1>
+        <div class="form">
+            <div class="doctorlist">
+                <div class="doctor">
+                    <img class="photo" src="image/docphoto.png"/ >
+                    <p>
+                        <span>姜志超</span><br />
+                        ● 主任医师<br /><br />
+                        <span style="font-size:22px;color:#808080">在此领域有着非凡的成就，获得过2016年的此，<br />国内此领域专家之一</span>
+                    </p>                   
+                </div>
+
+                <div class="doctor">
+                    <table>
+                        <tr>
+                            <td id="date1">
+                                09-
+                            </td>
+                            <td id="week1">
+                                星期
+                            </td>
+                            <td style="letter-spacing:4px">
+                                上午
+                            </td>
+                            <td>
+                                ¥16.00元
+                            </td>
+                            <td>
+                                <a class="table_a" href="pay.html" id="payhref1" onclick="content1()">预约</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="date2">
+                                09-
+                            </td>
+                           <td id="week2">
+                                星期
+                            </td>
+                            <td style="letter-spacing:4px">
+                                下午
+                            </td>
+                            <td>
+                                ¥16.00元
+                            </td>
+                            <td>
+                                <a class="table_a" href="pay.html" id="payhref2" onclick="content2()">预约</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>      
+            </div>                  
+        </div>
+    </div>
+
+<script type="text/javascript">
+    window.onload = function () {
+
+        var da = localStorage.getItem("d");
+        for (var i = 5; i < 10; i++) {
+            if (da == i) { document.getElementById("date1").innerHTML = "09-0" + i; document.getElementById("date2").innerHTML = "09-0" + i; }
+        }
+        for (var i = 10; i < 13; i++) {
+            if (da == i) { document.getElementById("date1").innerHTML = "09-" + i; document.getElementById("date2").innerHTML = "09-" + i; }
+        }
+
+        if (da == 5) { document.getElementById("week1").innerHTML = "星期一"; document.getElementById("week2").innerHTML = "星期一"; }
+        if (da == 6) { document.getElementById("week1").innerHTML = "星期二"; document.getElementById("week2").innerHTML = "星期二"; }
+        if (da == 7) { document.getElementById("week1").innerHTML = "星期三"; document.getElementById("week2").innerHTML = "星期三"; }
+        if (da == 8) { document.getElementById("week1").innerHTML = "星期四"; document.getElementById("week2").innerHTML = "星期四"; }
+        if (da == 9) { document.getElementById("week1").innerHTML = "星期五"; document.getElementById("week2").innerHTML = "星期五"; }
+        if (da == 10) { document.getElementById("week1").innerHTML = "星期六"; document.getElementById("week2").innerHTML = "星期六"; }
+        if (da == 11) { document.getElementById("week1").innerHTML = "星期日"; document.getElementById("week2").innerHTML = "星期日"; }
+        if (da == 12) { document.getElementById("week1").innerHTML = "星期一"; document.getElementById("week2").innerHTML = "星期一"; }
+
+
+    }
+    function content1() {
+        var name = "jiang";
+        localStorage.setItem("n", name);
+        var time = "morning";
+        localStorage.setItem("t", time);
+    }
+    function content2() {
+        var name = "jiang";
+        localStorage.setItem("n", name);
+        var time = "afternoon";
+        localStorage.setItem("t", time);
+    }
+
+</script>
+</body>
+</html>

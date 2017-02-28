@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刷卡建档 补齐</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script type="text/javascript">
+        function crd(){
+    jss.acrdJs();
+    }
+    </script>
+</head>
+<body>
+<div class="login-page">
+    <div style="display:block;float:left;margin:2% 0 0 2%;width:16%">
+            <a href="file_scan.html" style="margin:0;display:block;float:left;padding:0 30px" onClick="crd()">
+                <img style="width:45px;" src="image/back.png"/>
+            </a>
+            <a href="index.html" style="margin:0;display:block;float:left;">
+                <img style="width:45px;" src="image/index.png"/>
+            </a>
+        </div>
+    <h1>刷 卡 建 档</h1>
+    <div class="form">
+        <form class="login-form-manual">
+            <a style="font-size:24px;color:#000000;letter-spacing:5px;padding:2% 60% 2% 2%;margin:0 0 2%;display:block;float:left">姓 名：张 三</a>
+            <a style="font-size:24px;letter-spacing:5px;padding:2% 70% 2% 2%;margin:0 0 2%;display:block;float:left">性 别：男</a>
+            <a style="font-size:24px;letter-spacing:5px;padding:2% 60% 2% 2%;margin:0 0 2%;display:block;float:left">民 族：汉 族</a>
+            <!--<a style="font-size:24px;color:#000000;letter-spacing:5px">电 话：</a><input placeholder="请输入您的联系电话" type="text" style="width:76%">-->
+            <a style="font-size:24px;color:#000000;">手机号：</a><input placeholder="请输入您的手机号码" type="text">
+            <a style="font-size:24px;color:#000000;padding:2% 20% 2% 2%;margin:0 0 2%;display:block;float:left">身份证：371321199302257914</a>
+            <div class="buttons">
+                <a href="file_success.html"><p class = "button_link"  style="color:#fff;margin:0">提 交</p></a>
+            </div>
+
+
+            <a style="font-size:24px;color:#000000;letter-spacing:5px;padding:2% 40% 2% 2%;margin:0 0 2%;display:block;float:left">出 生 年 月：</a>    
+            <a style="font-size:24px;color:#000000;letter-spacing:5px;padding:2% 60% 2% 2%;margin:0 0 2%;display:block;float:left">1993年02月</a>         
+            <a style="font-size:24px;color:#000000;padding:2% 50% 2% 2%;margin:0 0 2%;display:block;float:left">住 宅 地 址：</a>
+            <select name="province" class="birth"><option>上 海</option><option>北 京</option><option>江苏省</option><option>山东省</option><option>浙江省</option><option>广东省</option><option>河南省</option><option>河北省</option><option>山西省</option><option>陕西省</option></select>
+            <select name="city" class="birth"><option>上海市</option></select>
+            <select name="area" class="birth"><option>宝山区</option><option>长宁区</option><option>奉贤区</option><option>嘉定区</option><option>虹口区</option><option>浦东新区</option><option>松江区</option><option>青浦区</option><option>杨浦区</option><option>闵行区</option></select>
+            <input placeholder="请输入详细地址" type="text" style="width:98%">
+            <div class="buttons" style="background:#ff6a00">
+                <a href="file_byhand.html"><p class = "button_link"  style="color:#fff;margin:0;">手工建档</p></a>
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>

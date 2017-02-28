@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手工绑卡</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script type="text/javascript">
+    function rec(){
+    js.acllJs();
+    }
+    function crd(){
+    jss.acrdJs();
+    }
+    </script>
+</head>
+<body>
+    <div class="login-page">
+        <div style="display:block;float:left;margin:2% 0 0 2%;width:16%">
+            <a href="card_scan.html" style="margin:0;display:block;float:left;padding:0 30px" onClick="crd()">
+                <img style="width:45px;" src="image/back.png"/>
+            </a>
+            <a href="index.html" style="margin:0;display:block;float:left;">
+                <img style="width:45px;" src="image/index.png"/>
+            </a>
+        </div>
+        <h1>手 工 绑 卡</h1>
+        <div class="form">
+            <form class="login-form-manual">
+                <a style="font-size: 24px; color: #000000; letter-spacing: 5px">姓 名：</a><input placeholder="请输入您的姓名" type="text">
+                <a style="font-size: 24px; color: #000000;letter-spacing: 5px">卡 号：</a><input placeholder="请输入您的卡号" type="text">
+                <div class="buttons">
+                    <a href="card_success.html">
+                        <p class="button_link" style="color: #fff; margin: 0">提 交</p>
+                    </a>
+                </div>
+
+                <input placeholder="请输入您的手机号" type="text" style="width: 60%; font-size: 17px; height: 47px;"><input style="width: 30%; font-size: 17px; margin: 0 2% 2% 2%; color: #fff; background-color: #91df1a; text-align: center"
+                    type="button" id="btn" value="获取验证码" onclick="settime(this)" />
+                <input id="yzm" value="" placeholder="请输入短信验证码" type="text" style="width: 34%; font-size: 17px; height: 47px; display: block; float: left; margin: 0 0 2% 4%">
+                <div id="yn_success" style="display: none">
+                    <a style="font-size: 20px; color: #000000; padding: 2% 0 2% 2%; margin: 1% 0 0 0; display: block; float: left; color: #91df1a">√</a>
+                    <a style="font-size: 20px; color: #000000; padding: 2% 20% 2% 2%; margin: 1% 0 0 0; display: block; float: left">验证成功</a>
+                </div>
+
+                <div class="buttons" style="background: #ff6a00">
+                    <a href="card_scan.html"><p class="button_link" style="color: #fff; margin: 0;" onclick="crd()">刷卡绑卡</p></a>
+                </div>
+
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

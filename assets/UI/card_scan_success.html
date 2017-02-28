@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刷卡建档 补齐</title>
+    <link href="css/index.css" rel="stylesheet">
+    <script type="text/javascript">
+        function crd(){
+    jss.acrdJs();
+        }
+        
+</script> 
+</head>
+<body>
+<div class="login-page">
+    <div style="display:block;float:left;margin:2% 0 0 2%;width:16%">
+            <a href="card_scan.html" style="margin:0;display:block;float:left;padding:0 30px"  onClick="crd()">
+                <img style="width:45px;" src="image/back.png"/>
+            </a>
+            <a href="index.html" style="margin:0;display:block;float:left;">
+                <img style="width:45px;" src="image/index.png"/>
+            </a>
+        </div>
+    <h1>刷 卡 绑 卡</h1>
+    <div class="form">
+        <form class="login-form-manual">
+            <a style="font-size:24px;color:#000000;padding:2% 40% 2% 2%;margin:0 0 2%;display:block;float:left">开户行：中国银行</a>         
+            <a id="card" name="card" style="font-size:26px;color:#000000;padding:2% 20% 2% 2%;margin:0 0 2%;display:block;float:left">卡 &nbsp;号：</a>
+            <div class="buttons">
+                <a href="card_success.html"><p class = "button_link"  style="color:#fff;margin:0">提 交</p></a>
+            </div>
+
+            <input placeholder="请输入您的手机号" type="text" style="width:60%;font-size:17px;height:47px;"><input style="width: 30%; font-size: 17px; margin: 0 2% 2% 2%; color: #fff; background-color: #91df1a; text-align: center"
+                type="button" id="btn" value="获取验证码" onclick="settime(this)" />
+            <input id="yzm" value="" placeholder="请输入短信验证码" type="text" style="width:34%;font-size:17px;height:47px;display:block;float:left;margin:0 0 2% 4%">
+            <div id="yn_success" style="display:none">
+                <a style="font-size:20px;color:#000000;padding:2% 0 2% 2%;margin:1% 0 0 0;display:block;float:left;color:#91df1a">√</a>
+                <a style="font-size:20px;color:#000000;padding:2% 20% 2% 2%;margin:1% 0 0 0;display:block;float:left">验证成功</a>
+            </div>
+            
+            <div class="buttons" style="background:#ff6a00">
+                <a href="card_byhand.html"><p class = "button_link"  style="color:#fff;margin:0;">手工绑卡</p></a>
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+    window.setInterval("yz()", 1000);
+    function yz() {
+        var yzm = document.getElementById("yn_success");
+        if (document.getElementById("yzm").value == "123456") {
+            yzm.style.display = "inline";
+        } else {
+            yzm.style.display = "none";
+        }
+    }
+            window.onload=function(){
+
+                var c=localStorage.getItem("cardid");
+                document.getElementById("card").innerHTML = "卡 &nbsp;号：" + c.substr(0, 6) + " **** " + c.substr(15, 4);            
+            }
+
+            var countdown = 60;
+            function settime(val) {              
+                if (countdown == 0) {
+                    val.removeAttribute("disabled");
+                    val.value = "免费获取验证码";
+                    countdown = 60;
+                } else {
+                    val.setAttribute("disabled", true);
+                    val.value = "重新发送(" + countdown + ")";
+                    countdown--;
+                }
+                setTimeout(function () {
+                    settime(val)
+                }, 1000)
+            }
+    </script>
+</html>

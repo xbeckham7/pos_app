@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缴费</title>
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/registration.css" rel="stylesheet">
+    
+    
+</head>
+<body>
+    <div class="login-page">
+        <div style="display:block;float:left;margin:2% 0 0 2%;width:16%">
+            <a href="pay_success.html" style="margin:0;display:block;float:left;padding:0 30px">
+                <img style="width:45px;" src="image/back.png"/>
+            </a>
+            <a href="index.html" style="margin:0;display:block;float:left;">
+                <img style="width:45px;" src="image/index.png"/>
+            </a>
+        </div>
+        <h1>订 单 详 情</h1>
+        <div class="form">
+            <div class="pay" style="padding:0">
+                <table class="table_detail">
+                    <tr><td colspan="3" style="color:#91df1a;border-bottom:solid 2px #e4e1e1;height:60px">订单号：010062<a href="index.html" style="font-size:18px;display:block;float:right;padding-top:5px;color:#6aadeb">返回首页</a></td></tr>
+                    <tr><td colspan="3" id="time">就诊时间：<a style="color:#808080">2016-09-08</a></td></tr>
+                    <tr><td colspan="3">就诊医院：<a style="color:#808080">xx医院</a></td></tr>
+                    <tr><td colspan="3" id="department">问诊科室：<a style="color:#808080">外科</a></td></tr>
+                    <tr><td colspan="3" id="name">挂号医生：</td></tr>
+                    <tr><td colspan="3" style="border-bottom:solid 2px #e4e1e1;"></td></tr>
+                    <tr>
+                        <td>
+                            <img style="width:50%" src="image/card_green.png" />
+                            <p style="font-size:18px;color:#aea7a7;margin-bottom:0">诊查项目</p>
+                        </td>
+                        <td>
+                            <img style="width:50%" src="image/card_blue.png" />
+                            <p style="font-size:18px;color:#aea7a7;margin-bottom:0">药品清单</p>
+                        </td>
+                        <td>
+                            <img style="width:50%" src="image/card_red.png" />
+                            <p style="font-size:18px;color:#aea7a7;margin-bottom:0">费用清单</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">   
+
+    window.onload = function () {
+
+        var da = localStorage.getItem("d");
+        var nm = localStorage.getItem("n");
+        var tm = localStorage.getItem("t");
+        var dp = localStorage.getItem("dpt");
+
+        if (nm == "li") { nm = "李雪峰" } else if (nm == "chen") { nm = "陈乔恩" } else if (nm == "jiang") { nm = "姜志超" } else if (nm == "song") { nm = "宋培培" } else if (nm == "wang") { nm = "王磊" };
+        if (tm == "morning") { tm = "上午" } else { tm = "下午" };
+        if (dp == "all") { dp = "全 科" } else if (dp == "wk") { dp = "外 科" } else if (dp == "nk") { dp = "内 科" } else if (dp == "yk") { dp = "眼 科" } else if (dp == "zy") { dp = "中医科" } else if (dp == "pfk") { dp = "皮肤科" } else if (dp == "jy") { dp = "检验科" } else if (dp == "ebhk") { dp = "耳鼻喉科" };
+
+        for (var i = 5; i < 10; i++) {
+            if (da == i) {
+                document.getElementById("time").innerHTML = '就诊时间：<a style="color:#808080">2016-09-0' + da + ' ' + tm + '</a>';
+                document.getElementById("name").innerHTML = '挂号医生：<a style="color:#808080">' + nm + '</a>';
+                document.getElementById("department").innerHTML = '问诊科室：<a style="color:#808080">' + dp + '</a>';
+            }
+        }
+        for (var i = 10; i < 13; i++) {
+            if (da == i) {
+                document.getElementById("time").innerHTML = '就诊时间：<a style="color:#808080">2016-09-' + da + ' ' + tm + '</a>';
+                document.getElementById("name").innerHTML = '挂号医生：<a style="color:#808080">' + nm + '</a>';
+                document.getElementById("department").innerHTML = '问诊科室：<a style="color:#808080">' + dp + '</a>';
+            }
+        }    
+
+    }   
+
+</script>
+</body>
+</html>
